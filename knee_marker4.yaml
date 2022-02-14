@@ -1,0 +1,158 @@
+annotations: null
+mdl_layout: Horizontal {{ expandX=True expandY=True Vertical {{ expandX=True expandY=True
+  {editor} Grid {{ expandX=True expandY=True {viewports} }} }} Vertical {{alignY=Top
+  expandX=True w=300 maxw=300 Grid {{ expandX=True margin=5 spacing=2 {qa_fields}
+  }} }} }}
+qa_fields:
+  markers:
+    control: Landmarks
+    documentation: ''
+    markers_per_row: 3
+    groups:
+    - color:
+      - 255
+      - 123
+      - 4
+      description: Landmarks on the right knee
+      line_width: 2
+      marker_size: 3
+      marker_type: Dot
+    - color:
+      - 44
+      - 115
+      - 255
+      description: Landmarks on the left knee
+      line_width: 2
+      marker_size: 3
+      marker_type: Dot
+    hint_text: Markers
+    initial_value: ''
+    label: Markers
+    markers:
+    - category: Sagittal_Pat_R
+      name: Sup_Pat_R
+    - category: Sagittal_Pat_R
+      name: Inf_Pat_R
+    - category: Sagittal_Pat_R
+      name: Inf_Art_Pat_R
+    - category: Sagittal_Tib_R
+      name: Sup_Tib_R
+    - category: Sagittal_Tib_R
+      name: Sup_Ant_Tib_R
+    - category: Axial_Pat_R
+      name: Lat_Pat_R
+    - category: Axial_Pat_R
+      name: Med_Pat_R
+    - category: Axial_Pat_R
+      name: Ant_Pat_R
+    - category: Axial_Pat_R
+      name: Pos_Pat_R
+    - category: Axial_Fem_R_Ant
+      name: Sulc_R
+    - category: Axial_Fem_R_Ant
+      name: Med_Ant_Cond_R
+    - category: Axial_Fem_R_Ant
+      name: Lat_Ant_Cond_R      
+    - category: Axial_Fem_R_Post
+      name: Lat_Pos_Cond_R
+    - category: Axial_Fem_R_Post
+      name: Med_Pos_Cond_R
+    - category: Axial_Tub_Tib_R
+      name: Tub_Tib_R
+    - category: Sagittal_Pat_L
+      name: Sup_Pat_L
+      type: 1
+    - category: Sagittal_Pat_L
+      name: Inf_Pat_L
+      type: 1
+    - category: Sagittal_Pat_L
+      name: Inf_Art_Pat_L
+      type: 1
+    - category: Sagittal_Tib_L
+      name: Sup_Tib_L
+      type: 1
+    - category: Sagittal_Tib_L
+      name: Sup_Ant_Tib_L
+      type: 1
+    - category: Axial_Pat_L
+      name: Lat_Pat_L
+      type: 1
+    - category: Axial_Pat_L
+      name: Med_Pat_L
+      type: 1
+    - category: Axial_Pat_L
+      name: Ant_Pat_L
+      type: 1
+    - category: Axial_Pat_L
+      name: Pos_Pat_L
+      type: 1
+    - category: Axial_Fem_L_Ant
+      name: Sulc_L
+      type: 1
+    - category: Axial_Fem_L_Ant
+      name: Med_Ant_Cond_L
+      type: 1
+    - category: Axial_Fem_L_Ant
+      name: Lat_Ant_Cond_L
+      type: 1
+    - category: Axial_Fem_L_Post
+      name: Lat_Pos_Cond_L
+      type: 1
+    - category: Axial_Fem_L_Post
+      name: Med_Pos_Cond_L
+      type: 1
+    - category: Axial_Tub_Tib_L
+      name: Tub_Tib_L
+      type: 1
+    x: 0
+    y: 0
+  quality:
+    content:
+      unusable:
+        control: CheckBox
+        documentation: ''
+        initial_value: false
+        label: Scans unusable
+        type: Bool
+        x: 0
+        y: 1
+      unusable_reason:
+        control: TextBox
+        documentation: ''
+        initial_value: ''
+        label: 'If unusable, please specify:'
+        type: String
+        visible_on: $unusable
+        x: 0
+        y: 3
+    control: BoxWidget
+    documentation: ''
+    initial_value: false
+    label: Quality
+    x: 0
+    y: 2
+scans:
+  T1_WATER:
+    modality: MR
+    protocol: 3DGRASS
+sop: ''
+template_name: knee_marker
+viewports:
+- annotation: null
+  interpolation: linear
+  linked: true
+  name: ViewPortLeft
+  orientation: Axial
+  scan: 3DGRASS
+  type: viewport
+  x: 0
+  y: 0
+- annotation: null
+  interpolation: linear
+  linked: true
+  name: ViewPortRight
+  orientation: Sagittal
+  scan: 3DGRASS
+  type: viewport
+  x: 1
+  y: 0
